@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/config.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/pagina.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <title>Welcome</title>
+
+    <script async="" src="js/gtm.js"></script>
+    <script>!function (i, n) { i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now()) }(window, performance);</script>
+    <link rel="preload"
+        href="https://scripts.converteai.net/8671d2f6-c45f-4b55-9776-68f6c495a79a/players/6a2c53ac0c2d7df2b9594be6/v4/player.js"
+        as="script">
+    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://m3u8.vturb.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5XDRBDNV');</script>
+    <!-- End Google Tag Manager -->
+
+
+        <script src="https://go.intrega.site/assets/easyt.js" async></script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1013235268316421');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1013235268316421&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <style>
+        :root {
+            --cor1: #582898 !important;
+            --cor2: #7a3ec7 !important;
+        }
+
+        /* Overriding hardcoded gradients and green elements from CSS files */
+        #quizz-container {
+            background: radial-gradient(circle at top left, rgba(255, 222, 0, 0.16), transparent 24%), linear-gradient(145deg, #582898 0%, #421e72 52%, #2c144c 100%) !important;
+        }
+
+        .quiz-shell {
+            box-shadow: 0 24px 60px rgba(88, 40, 152, 0.18) !important;
+        }
+
+        .quiz-progress-track {
+            background: rgba(88, 40, 152, 0.12) !important;
+        }
+
+        .quiz-progress-fill {
+            background: linear-gradient(90deg, var(--cor1) 0%, var(--cor1) 60%, var(--cor2) 100%) !important;
+        }
+
+        .quiz-choice,
+        .quiz-check-card {
+            border-color: rgba(88, 40, 152, 0.1) !important;
+        }
+
+        .quiz-choice:hover,
+        .quiz-check-card:hover {
+            border-color: rgba(88, 40, 152, 0.4) !important;
+            background: rgba(88, 40, 152, 0.04) !important;
+            box-shadow: 0 16px 32px rgba(88, 40, 152, 0.14) !important;
+        }
+
+        .quiz-choice.is-selected,
+        .quiz-check-card.is-selected {
+            border-color: var(--cor1) !important;
+            background: rgba(122, 62, 199, 0.08) !important;
+            box-shadow: 0 18px 34px rgba(88, 40, 152, 0.16) !important;
+        }
+
+        .quiz-check-card::after {
+            border-color: rgba(88, 40, 152, 0.3) !important;
+        }
+
+        .quiz-primary-btn,
+        .quiz-primary-link {
+            background: linear-gradient(0deg, #582898 45% 0%, #7a3ec7 55%) !important;
+            border-color: rgb(88 40 152 / 50%) !important;
+        }
+
+        .quiz-loader-track {
+            background: rgba(88, 40, 152, 0.12) !important;
+        }
+
+        .quiz-loader-bar {
+            background: linear-gradient(90deg, var(--cor1) 0%, #7a3ec7 100%) !important;
+        }
+
+        .quiz-benefits-list li {
+            color: var(--cor1) !important;
+        }
+
+        .quiz-benefits-list li::before {
+            background: var(--cor1) !important;
+        }
+
+        .ship-icon {
+            background: var(--cor1) !important;
+        }
+
+        /* Voltar preços para verde conforme solicitado */
+        .price, .savings-text, .total-price strong {
+            color: #257224 !important;
+        }
+        
+        .savings-highlight {
+            background: rgba(37, 114, 36, 0.1) !important;
+            color: #257224 !important;
+        }
+
+        /* Degradê do Best Value (roxo claro com roxo escuro) */
+        .produto-card.destaque .produto-header {
+            background: linear-gradient(135deg, #7a3ec7 0%, #582898 100%) !important;
+        }
+        
+        .produto-card.destaque {
+            background: radial-gradient(ellipse at top, #fbf8ff 0%, #f4eeff 50%, rgba(88, 40, 152, 0.12) 100%) !important;
+            border-color: #582898 !important;
+            box-shadow: 0 12px 32px rgba(88, 40, 152, 0.25) !important;
+        }
+
+        .produto-card.destaque:hover {
+            box-shadow: 0 16px 40px rgba(88, 40, 152, 0.3) !important;
+        }
+
+        /* Middle card button specific color (Yellow) */
+        .produto-card.destaque .btn {
+            background: #f5c60d !important;
+            color: #000 !important;
+            border-color: #d4ab0b !important;
+            box-shadow: 0 4px 15px rgba(245, 198, 13, 0.4) !important;
+            font-weight: 900 !important;
+        }
+
+        .produto-card.destaque .btn:hover {
+            filter: brightness(1.1) !important;
+            transform: scale(1.02) !important;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XDRBDNV" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+    <div class="top-newsbar">
+        <div class="sessao top-newsbar-inner">
+            <div class="top-newsbar-logo">
+                <img src="images/itv-logo.svg" alt="ITV News" class="top-newsbar-logo-img">
+            </div>
+            <div class="top-newsbar-nav" aria-label="News sections">
+                <span class="nav-item nav-item-area">Your Area
+                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true">
+                        <path d="M1 1.5L6 6.5L11 1.5" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+                <span class="nav-item">Politics</span>
+                <span class="nav-item">Royal</span>
+                <span class="nav-item">World</span>
+                <span class="nav-item">Health</span>
+                <span class="nav-item">Entertainment</span>
+                <span class="nav-item">Weather</span>
+            </div>
+            <div class="top-newsbar-search" aria-hidden="true">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="7.5" stroke="white" stroke-width="2.5"></circle>
+                    <path d="M16.5 16.5L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div id="header">
+        <div class="sessao py-40 flex flex-col gap-16 relativo">
+
+            <h1>
+                Dr Hilary Jones Reveals the Gelatine Recipe to Lose 2 Stone Before the End of <span
+                    id="titulo-mes"></span>
+            </h1>
+
+            <div id="author">
+                <!--<p class="texto-95">By Dr. Sarah Jarvis</p>-->
+                <p class="texto-50">Updated 30 minutes ago <span id="data"></span></p>
+            </div>
+
+            <vturb-smartplayer id="vid-6a2c53ac0c2d7df2b9594be6" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
+            <script type="text/javascript">
+                var s = document.createElement("script");
+                s.src = "https://scripts.converteai.net/8671d2f6-c45f-4b55-9776-68f6c495a79a/players/6a2c53ac0c2d7df2b9594be6/v4/player.js", s.async = !0, document.head.appendChild(s);
+            </script>
+
+
+
+        </div>
+    </div>
+
+    <div id="quizz-container" class="esconder">
+        <div class="sessao py-40">
+            <div class="quiz-shell">
+                <div class="quiz-progress" aria-hidden="true">
+                    <span id="quiz-progress-label" class="quiz-progress-label">Welcome</span>
+                    <div class="quiz-progress-track">
+                        <div id="quiz-progress-fill" class="quiz-progress-fill"></div>
+                    </div>
+                </div>
+
+                <div id="lipotide-quiz" class="quiz-card quiz-card-custom">
+                    <section class="quiz-panel active" data-panel="intro" data-progress-label="Welcome"
+                        data-progress="0">
+                        <h2 class="pb-20">Find Your Ideal Lipotide Formula</h2>
+                        <p class="quiz-description">Answer these quick questions to create a powerful, personalised
+                            solution — perfectly tailored to your body, your goals, and your lifestyle. Get ready for
+                            results you’ll see and feel!</p>
+                        <button type="button" class="quiz-primary-btn" data-quiz-start="">Let’s Get Started</button>
+                    </section>
+
+                    <section class="quiz-panel" data-panel="age" data-progress-label="Step 1 of 5" data-progress="20">
+                        <h3 class="quiz-question-title">What’s your age range?</h3>
+                        <p class="quiz-question-subtitle">This helps us optimize your formula</p>
+                        <div class="quiz-options-grid">
+                            <button type="button" class="quiz-choice" data-answer-key="age" data-answer-value="18-29">
+                                <span class="quiz-choice-title">18-29</span>
+                                <span class="quiz-choice-note">Early Metabolism</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="age" data-answer-value="30-39">
+                                <span class="quiz-choice-title">30-39</span>
+                                <span class="quiz-choice-note">Balanced Burn</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="age" data-answer-value="40-49">
+                                <span class="quiz-choice-title">40-49</span>
+                                <span class="quiz-choice-note">Hormonal Shift</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="age" data-answer-value="50+">
+                                <span class="quiz-choice-title">50+</span>
+                                <span class="quiz-choice-note">Mature Support</span>
+                            </button>
+                        </div>
+                        <div class="navigation-buttons">
+                            <button type="button" class="btn-back quiz-secondary-btn" data-quiz-back="">Back</button>
+                        </div>
+                    </section>
+
+                    <section class="quiz-panel" data-panel="weight" data-progress-label="Step 2 of 5"
+                        data-progress="40">
+                        <h3 class="quiz-question-title">What’s your current weight range?</h3>
+                        <p class="quiz-question-subtitle">Select the range that fits you best</p>
+                        <div class="quiz-options-grid">
+                            <button type="button" class="quiz-choice" data-answer-key="weight"
+                                data-answer-value="7-10 st">
+                                <span class="quiz-choice-title">7-10 st</span>
+                                <span class="quiz-choice-note">Light Weight</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="weight"
+                                data-answer-value="11-14 st">
+                                <span class="quiz-choice-title">11-14 st</span>
+                                <span class="quiz-choice-note">Moderate Weight</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="weight"
+                                data-answer-value="15-17 st">
+                                <span class="quiz-choice-title">15-17 st</span>
+                                <span class="quiz-choice-note">Heavy Weight</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="weight"
+                                data-answer-value="17+ st">
+                                <span class="quiz-choice-title">17+ st</span>
+                                <span class="quiz-choice-note">Extra Heavy</span>
+                            </button>
+                        </div>
+                        <div class="navigation-buttons">
+                            <button type="button" class="btn-back quiz-secondary-btn" data-quiz-back="">Back</button>
+                        </div>
+                    </section>
+
+                    <section class="quiz-panel" data-panel="height" data-progress-label="Step 3 of 5"
+                        data-progress="60">
+                        <h3 class="quiz-question-title">What’s your height range?</h3>
+                        <p class="quiz-question-subtitle">This helps calculate your ideal dosage</p>
+                        <div class="quiz-options-grid">
+                            <button type="button" class="quiz-choice" data-answer-key="height" data-answer-value="4'11"
+                                -="" 5'2""="">
+                                <span class="quiz-choice-title">4'11" - 5'2"</span>
+                                <span class="quiz-choice-note">Petite Frame</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="height" data-answer-value="5'3"
+                                -="" 5'6""="">
+                                <span class="quiz-choice-title">5'3" - 5'6"</span>
+                                <span class="quiz-choice-note">Average Height</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="height" data-answer-value="5'7"
+                                -="" 5'10""="">
+                                <span class="quiz-choice-title">5'7" - 5'10"</span>
+                                <span class="quiz-choice-note">Tall Frame</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="height" data-answer-value="5'11"
+                                +"="">
+                                <span class="quiz-choice-title">5'11"+</span>
+                                <span class="quiz-choice-note">Extra Tall</span>
+                            </button>
+                        </div>
+                        <div class="navigation-buttons">
+                            <button type="button" class="btn-back quiz-secondary-btn" data-quiz-back="">Back</button>
+                        </div>
+                    </section>
+
+                    <section class="quiz-panel" data-panel="goal" data-progress-label="Step 4 of 5" data-progress="80">
+                        <h3 class="quiz-question-title">How much weight do you want to lose?</h3>
+                        <p class="quiz-question-subtitle">Choose your target goal</p>
+                        <div class="quiz-options-grid">
+                            <button type="button" class="quiz-choice" data-answer-key="goal"
+                                data-answer-value="Up to 1 st">
+                                <span class="quiz-choice-title">Up to 1 st</span>
+                                <span class="quiz-choice-note">Light Trim</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="goal" data-answer-value="2-3 st">
+                                <span class="quiz-choice-title">2-3 st</span>
+                                <span class="quiz-choice-note">Moderate Loss</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="goal" data-answer-value="3-4 st">
+                                <span class="quiz-choice-title">3-4 st</span>
+                                <span class="quiz-choice-note">Major Loss</span>
+                            </button>
+                            <button type="button" class="quiz-choice" data-answer-key="goal" data-answer-value="5+ st">
+                                <span class="quiz-choice-title">5+ st</span>
+                                <span class="quiz-choice-note">Full Transform</span>
+                            </button>
+                        </div>
+                        <div class="navigation-buttons">
+                            <button type="button" class="btn-back quiz-secondary-btn" data-quiz-back="">Back</button>
+                        </div>
+                    </section>
+
+                    <section class="quiz-panel" data-panel="target" data-progress-label="Step 5 of 5"
+                        data-progress="100">
+                        <h3 class="quiz-question-title">Which areas do you want to target?</h3>
+                        <p class="quiz-question-subtitle">Select all that apply - multiple choices allowed</p>
+                        <div class="quiz-checkbox-grid">
+                            <label class="quiz-check-card">
+                                <input type="checkbox" name="target-area" value="Belly & Waist">
+                                <span class="quiz-check-copy">
+                                    <span class="quiz-choice-title">Belly & Waist</span>
+                                    <span class="quiz-choice-note">Stubborn midsection fat</span>
+                                </span>
+                            </label>
+                            <label class="quiz-check-card">
+                                <input type="checkbox" name="target-area" value="Hips">
+                                <span class="quiz-check-copy">
+                                    <span class="quiz-choice-title">Hips</span>
+                                    <span class="quiz-choice-note">Slim down your silhouette</span>
+                                </span>
+                            </label>
+                            <label class="quiz-check-card">
+                                <input type="checkbox" name="target-area" value="Thighs">
+                                <span class="quiz-check-copy">
+                                    <span class="quiz-choice-title">Thighs</span>
+                                    <span class="quiz-choice-note">Tone and tighten lower body</span>
+                                </span>
+                            </label>
+                            <label class="quiz-check-card">
+                                <input type="checkbox" name="target-area" value="Arms">
+                                <span class="quiz-check-copy">
+                                    <span class="quiz-choice-title">Arms</span>
+                                    <span class="quiz-choice-note">Reduce upper body softness</span>
+                                </span>
+                            </label>
+                            <label class="quiz-check-card">
+                                <input type="checkbox" name="target-area" value="Back">
+                                <span class="quiz-check-copy">
+                                    <span class="quiz-choice-title">Back</span>
+                                    <span class="quiz-choice-note">Smooth stubborn back fat</span>
+                                </span>
+                            </label>
+                            <label class="quiz-check-card">
+                                <input type="checkbox" name="target-area" value="Full Body">
+                                <span class="quiz-check-copy">
+                                    <span class="quiz-choice-title">Full Body</span>
+                                    <span class="quiz-choice-note">All-over transformation support</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="navigation-buttons navigation-buttons-split">
+                            <!--<button type="button" class="btn-back quiz-secondary-btn" data-quiz-back>Back</button>-->
+                            <button type="button" class="btn-calculate quiz-primary-btn" data-quiz-calculate=""
+                                disabled="">CALCULATE MY FORMULA</button>
+                        </div>
+                    </section>
+
+                    <section class="quiz-panel" data-panel="loading" data-progress-label="Finalizing"
+                        data-progress="100">
+                        <h3 class="quiz-question-title">Calculating Your Perfect Formula…</h3>
+                        <p class="quiz-question-subtitle">Please wait just a few moments while we calculate the ideal
+                            nutrient ratio for your Body.</p>
+                        <p class="quiz-description quiz-description-tight">We’ll fine-tune every ingredient to ensure
+                            you get the results you’ve been craving - starting from Day One!</p>
+
+                        <div class="quiz-loading-points">
+                            <div class="quiz-loading-item">✔ Analyzing Your Profile</div>
+                            <div class="quiz-loading-item">✔ Optimizing dosage</div>
+                            <div class="quiz-loading-item">✔ Matching ingredients</div>
+                            <div class="quiz-loading-item">✔ Finalizing formula</div>
+                        </div>
+
+                        <div class="quiz-timer-wrap">
+                            <span class="quiz-timer-label">Estimated wait time</span>
+                            <strong id="quiz-timer" class="quiz-timer">00:06</strong>
+                        </div>
+
+                        <div class="quiz-loader-track">
+                            <div id="quiz-loader-bar" class="quiz-loader-bar"></div>
+                        </div>
+                    </section>
+
+                    <section class="quiz-panel" data-panel="result" data-progress-label="Offer Ready"
+                        data-progress="100">
+                        <h3 class="quiz-question-title">Congratulations</h3>
+                        <p class="quiz-question-subtitle">Your personalized Lipotide formula is ready - and it’s been
+                            custom-made to help you reach your weight and willness goals fasten than ever!</p>
+                        <div class="quiz-result-copy">
+                            <p class="quiz-result-heading">YOUR CUSTOM FORMULA INCLUDES:</p>
+                            <ul class="quiz-benefits-list">
+                                <li>Customized nutrient ratio for YOUR unique body</li>
+                                <li>Targets your specific problem areas</li>
+                                <li>Accelerates metabolism naturally</li>
+                                <li>No rebound effect - guaranteed lasting results</li>
+                                <li>Works from Day One</li>
+                            </ul>
+                        </div>
+
+                        <div class="quiz-offer-card">
+                            <p class="quiz-offer-title">SPECIAL OFFER UNLOCKED!</p>
+                            <p class="quiz-offer-subtitle">6-BOTTLE PROGRAM<br>MEGA EXCLUSIVE DISCOUNT</p>
+                            <p class="quiz-offer-text">This longer treatment ensures you’ll finally defeat the hidden
+                                root cause behind slow metabolism and stubborn fat storage, achieving lasting results
+                                without the rebound effect.</p>
+                        </div>
+
+                        <a id="btn-mostrar-potes" href="#produtos1" class="quiz-primary-btn quiz-primary-link"
+                            data-quiz-scroll="">Ready to Start? View Your Options!</a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="conteudo-principal" class="esconder">
+        <div class="faixa">
+            <div class="sessao flex alinhar-centro justificar-centro gap-8 py-24">
+                <p class="branco">Your order is reserved for:</p>
+                <strong id="countdown-timer" class="faixa-countdown">30:00</strong>
+            </div>
+        </div>
+
+        <div id="free-shipping-banner" class="produtos">
+            <div class="sessao py-24">
+                <div class="free-shipping-card intro-offer-badge" role="note" aria-label="Special Introductory Offer">
+                    <p class="intro-offer-text">Special Introductory Offer</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="produtos1" class="produtos ">
+            <div class="sessao grid-3 alinhar-centro gap-24 py-32">
+
+                <div class="produto-card br-12">
+                    <div class="produto-header">
+                        <h3 class="branco">Starter</h3>
+                    </div>
+                    <div class="produto-body p-12 flex flex-col alinhar-centro">
+                        <h1 class="cor1">1 BOTTLE</h1>
+                        <img class="produto-img" src="images/Bottle-1.webp">
+                        <div class="price"><small>£</small>59<small class="per-bottle">PER<br>BOTTLE</small></div>
+                        <p class="savings-text">Save £90</p>
+                        <p class="guarantee-text">☑ 60-DAY GUARANTEE</p>
+                        <a class="btn btn-full my-20"
+                            href="https://go.intrega.site/trk/offer/1"
+                            onclick="return trackIC(event)">ADD TO
+                            CART</a>
+                        <img src="images/cards.png">
+                        <p class="total-price">Total: <s>£149</s> <strong>£59</strong></p>
+                        <p class="shipping-note">+ Delivery fee</p>
+                    </div>
+                </div>
+
+                <div class="produto-card destaque br-12">
+                    <div class="produto-header">
+                        <h3 class="branco">Best Value</h3>
+                    </div>
+                    <div class="produto-body p-12 flex flex-col alinhar-centro">
+                        <h1 class="cor1">6 BOTTLES</h1>
+                        <p class="recommended-text">Our top pick</p>
+                        <img class="produto-img" src="images/Bottle-6.webp">
+                        <div class="price"><small>£</small>39<small class="per-bottle">PER<br>BOTTLE</small></div>
+                        <p class="savings-text savings-highlight">Save £660</p>
+                        <p class="guarantee-text">☑ 60-DAY GUARANTEE</p>
+                        <p class="guarantee-text">☑ BIGGEST SAVING</p>
+                        <a class="btn btn-full my-20"
+                            href="https://go.intrega.site/trk/offer/3"
+                            onclick="return trackIC(event)">ADD TO
+                            CART</a>
+                        <img src="images/cards.png">
+                        <p class="total-price">Total: <s class="cor5">£894</s> <strong>£234</strong></p>
+                        <p class="shipping-note">+ FREE DELIVERY</p>
+                    </div>
+                </div>
+
+                <div class="produto-card br-12">
+                    <div class="produto-header">
+                        <h3 class="branco">Customer Favourite</h3>
+                    </div>
+                    <div class="produto-body p-12 flex flex-col alinhar-centro">
+                        <h1 class="cor1">3 BOTTLES</h1>
+                        <img class="produto-img" src="images/Bottle-3.webp">
+                        <div class="price"><small>£</small>49<small class="per-bottle">PER<br>BOTTLE</small></div>
+                        <p class="savings-text">Save £300</p>
+                        <p class="guarantee-text">☑ 60-DAY GUARANTEE</p>
+                        <a class="btn btn-full my-20"
+                            href="https://go.intrega.site/trk/offer/2"
+                            onclick="return trackIC(event)">ADD TO
+                            CART</a>
+                        <img src="images/cards.png">
+                        <p class="total-price">Total: <s>£447</s> <strong>£147</strong></p>
+                        <p class="shipping-note">+ FREE DELIVERY</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="py-40 flex flex-col gap-8 alinhar-centro">
+                <h4>What Our Customers Are Saying</h4>
+                <div class="costumer-nota flex gap-12"><span class="estrelas">★★★★★</span> <span class="check">✔</span>
+                    <p>4.91/5</p>
+                </div>
+                <p class="texto-centro">Based on more than 79,200 reviews!</p>
+            </div>
+        </div>
+
+        <div class="garantia">
+            <div class="sessao py-40">
+                <div class="garantia-container">
+                    <div class="garantia-selo">
+                        <img src="images/garantia.webp" alt="60 Day Guarantee">
+                    </div>
+                    <div class="garantia-conteudo">
+                        <h1 class="preto">100% Satisfaction or Your Money Back</h1>
+                        <h2 class="preto">60-Day Unconditional Guarantee</h2>
+                        <p class="preto">We’re so confident that Lipotide will deliver remarkable results that we’re
+                            willing to take on all the risk for a full 60 days. From the moment your order arrives,
+                            start taking Lipotide daily and pay close attention to how you feel. Within just a few days,
+                            you may notice quicker thinking and better memory. Continue for a few weeks or months, and
+                            you’ll feel as though your memory has returned to its healthiest and sharpest state.
+                            <br><br>
+
+                            If at any point during these 60 days you don’t feel Lipotide is delivering on the promise
+                            we’ve made, just let us know. Our team will refund every penny, no questions asked and with
+                            no need to return anything.
+                        </p>
+                    </div>
+                    <img class="width-600 py-20" src="images/selos.webp" alt="Certified Quality Control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="fb-comments" class="sessao">
+        <h2 class="fb-heading"><b>36,158 Comments</b></h2>
+        <div class="comments-container">
+            <div class="comment" data-comment-id="1">
+                <img decoding="async" class="user-avatar" src="images/foto6.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Sophie Williams</p>
+                        <p class="text">OMG! My GP couldn’t believe it. I lost so much weight that he thought I was
+                            anorexic. But when the test results came back, I was healthier than ever!</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>2h</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 10 <img src="images/like.webp"> 23</span>
+            </div>
+            <div class="comment" data-comment-id="2">
+                <img decoding="async" class="user-avatar" src="images/foto1.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Lauren Bennett</p>
+                        <p class="text">Sophie Williams Girl, I lost 11 Pounds in a week! This gelatine trick is unreal!
+                        </p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>1h</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 10 <img src="images/like.webp"> 17</span>
+            </div>
+            <div class="comment" data-comment-id="3">
+                <img decoding="async" class="user-avatar" src="images/foto4.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Chloe Thompson</p>
+                        <p class="text">I've been using this gelatine trick for just over 3 weeks, and my trousers are
+                            already falling off! Even my husband complimented me today! Thank you for helping so many
+                            people without asking for anything in return.</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>52 min</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 10 <img src="images/like.webp"> 11</span>
+            </div>
+            <div class="comment" data-comment-id="4">
+                <img decoding="async" class="user-avatar" src="images/foto5.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Emma Clarke</p>
+                        <p class="text">Finally, someone who explains everything in just a few minutes without medical
+                            jargon! I'm starting this morning! Thank you for being so clear and direct.</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>31 min</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 10 <img src="images/like.webp"> 35</span>
+            </div>
+            <div class="comment" data-comment-id="5">
+                <img decoding="async" class="user-avatar" src="images/foto3.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Lauren Mitchell</p>
+                        <p class="text">My binge eating used to control me; I was always eating so many sweets! But now,
+                            I just don’t crave them anymore, and I’ve already lost 1 Stone 5 Pounds in two weeks! I
+                            haven’t felt this confident in years.</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>24 min</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 10 <img src="images/like.webp"> 54</span>
+            </div>
+            <div class="comment" data-comment-id="6">
+                <img decoding="async" class="user-avatar" src="images/user6.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Hannah Carter</p>
+                        <p class="text">Lauren Mitchell That’s unreal, lovely! Did you do anything in your routine
+                            besides the recipe?</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>8 min</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 10 <img src="images/like.webp"> 67</span>
+            </div>
+            <div class="comment" data-comment-id="7">
+                <img decoding="async" class="user-avatar" src="images/foto3.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Lauren Mitchell</p>
+                        <p class="text">Hannah Carter No, just the recipe! I didn’t go on any diets or set foot in the
+                            gym. It’s crazy how something so simple is making me lose so much weight!</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>7 min</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 8 <img src="images/like.webp"> 39</span>
+            </div>
+            <div class="comment" data-comment-id="8">
+                <img decoding="async" class="user-avatar" src="images/foto2.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Chloe Martin</p>
+                        <p class="text">Does anyone know if this really works? My GP said I have severe obesity, and I’m
+                            feeling pretty desperate!</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>6 min</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 6 <img src="images/like.webp"> 28</span>
+            </div>
+            <div class="comment" data-comment-id="9">
+                <img decoding="async" class="user-avatar" src="images/foto7.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Danielle Scott</p>
+                        <p class="text">Chloe Martin I researched online and found several scientific articles that
+                            prove this gelatine trick really works! Here, the numbers on the scale keep dropping, you
+                            should try it too!</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>5 min</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 9 <img src="images/like.webp"> 31</span>
+            </div>
+            <div class="comment" data-comment-id="10">
+                <img decoding="async" class="user-avatar" src="images/foto2.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Chloe Martin</p>
+                        <p class="text">Danielle Scott Thank you! I’m writing down all the ingredients now. I trust it’s
+                            going to work!</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>4 min</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 7 <img src="images/like.webp"> 24</span>
+            </div>
+            <div class="comment" data-comment-id="11">
+                <img decoding="async" class="user-avatar" src="images/user8-1.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Natalie Hughes</p>
+                        <p class="text">This is the most honest and well-explained solution I’ve ever seen! No long
+                            videos and no asking for anything at the end! Thank you so much!</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>3 min</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 12 <img src="images/like.webp"> 41</span>
+            </div>
+            <div class="comment" data-comment-id="12">
+                <img decoding="async" class="user-avatar" src="images/user9.webp" alt="">
+                <div class="comment-data">
+                    <div class="user">
+                        <p class="name">Sophie Bennett</p>
+                        <p class="text">After 3 weeks, my belly is finally flat as a board, I’ve lost 1 Stone 12 Pounds
+                            without even dieting! I already feel lighter and more beautiful!</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="like">Like</span>
+                        <span>·</span>
+                        <span class="answer">Reply</span>
+                        <span>·</span>
+                        <time>1 min</time>
+                    </div>
+                </div>
+                <span class="likes"><img src="images/amei.png"> 15 <img src="images/like.webp"> 58</span>
+            </div>
+            <h4 class="comments-closed">Comments are now closed for this post.</h4>
+        </div>
+    </div>
+
+
+
+    <div id="rodape" class="mt-40">
+        <div class="sessao width-1000 flex flex-col gap-20 py-20">
+            <!--<span class="texto-centro">All statements and results presented on this website are for informational
+                purposes only. They are not specific medical advice for any individual. Neither the website, nor product
+                should substitute medical advice given by a certified health professional. If you have a health problem,
+                or you have sensible allergies, are pregnant or diagnosed with chronic conditions, it is strongly
+                recommended that you consult your doctor immediately and before taking any pills or supplements.
+                Individual results may vary depending on the case.</span>-->
+
+            <!--<div class="flex gap-24 justificar-entre width-800 mx-auto ">
+                <a>Privacy Policy</a>
+                <a>Terms & Conditions</a>
+                <a>Disclaimer</a>
+                <a>Contact</a>
+            </div>-->
+
+            <p class="texto-centro">2026 Copyright © Lipotide. All rights reserved.</p>
+
+        </div>
+    </div>
+
+    <script src="js/funcoes.js"></script>
+    <script>
+
+        //funçao de esconder
+        esconder('45:00');
+
+    </script>
+
+
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+    <script src="js/digistore.js"></script>
+    <script type="text/javascript">
+        digistorePromocode({ "product_id": 680668, "adjust_all_urls": true, "adjust_domain": true });
+    </script>
+
+    <script>
+        // Função auxiliar para obter cookies
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(";").shift();
+            return null;
+        }
+
+        // Função para listar TODOS os cookies (DEBUG)
+        function getAllCookies() {
+            if (!document.cookie) return [];
+            return document.cookie.split('; ').map(c => {
+                var parts = c.split('=');
+                return { name: parts[0], value: parts[1] };
+            });
+        }
+
+        // Função de Rastreio InitiateCheckout (Pixel direto + EasyTracker)
+        function trackIC(event) {
+            event.preventDefault();
+            var url = event.currentTarget.href;
+
+            console.log('=== INICIANDO TRACKING IC ===');
+            console.log('URL do botão:', url);
+
+            // 0. Dispara InitiateCheckout no Meta Pixel (FACEBOOK) direto
+            if (typeof fbq === 'function') {
+                fbq('track', 'InitiateCheckout');
+                console.log('✓ InitiateCheckout enviado via Meta Pixel');
+            } else {
+                console.warn('⚠ fbq não disponível');
+            }
+
+            // 1. Anexa os parâmetros da URL atual
+            var queryString = window.location.search;
+            if (queryString) {
+                var cleanQuery = queryString.replace(/^\?/, '');
+                if (url.indexOf('?') > -1) {
+                    url += '&' + cleanQuery;
+                } else {
+                    url += '?' + cleanQuery;
+                }
+            }
+
+            // 2. Debug: Listar TODOS os cookies disponíveis
+            var allCookies = getAllCookies();
+            console.log('COOKIES ENCONTRADOS:', allCookies);
+            console.log('Total de cookies:', allCookies.length);
+
+            // 3. Tentar encontrar o clickId em vários nomes possíveis
+            var clickId = getCookie("easytid") || 
+                         getCookie("rtkclickid-store") || 
+                         getCookie("etid") ||
+                         getCookie("easytracker_click_id") ||
+                         getCookie("easytracker_clickid");
+
+            console.log('ClickId procurado:', clickId);
+
+            // 4. Disparar o postback (usando POST com keepalive)
+            if (clickId) {
+                // Prepara payload para POST
+                var postbackData = {
+                    clickid: clickId,
+                    event: 'InitiateCheckout',
+                    cb: Date.now()
+                };
+                
+                console.log('✓ ClickId encontrado! Enviando postback com dados:', postbackData);
+                console.log('URL destino:', 'https://go.intrega.site/trk/postback');
+
+                try {
+                    // Tenta com POST (método mais comum para APIs)
+                    fetch('https://go.intrega.site/trk/postback', {
+                        method: 'POST',
+                        keepalive: true,
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        body: 'clickid=' + encodeURIComponent(clickId) + '&event_name=InitiateCheckout&cb=' + Date.now()
+                    }).then(function(response) {
+                        console.log('✓ POSTBACK ENVIADO COM SUCESSO (POST method com event_name)');
+                        console.log('Response status:', response.status);
+                    }).catch(function(e) {
+                        console.error("⚠ Fetch error (mas postback pode ter sido enviado):", e);
+                    });
+                } catch (e) {
+                    console.error("✗ Erro ao enviar postback:", e);
+                }
+            } else {
+                console.error('✗ NENHUM CLICKID ENCONTRADO NOS COOKIES!');
+                console.log('Cookies disponíveis:', allCookies.map(c => c.name).join(', '));
+            }
+
+            // 5. Redirecionar (delay aumentado para 10 segundos para debug)
+            console.log('Redirecionando em 10 segundos... Verifique o Network tab agora!');
+            setTimeout(function () {
+                window.top.location.href = url;
+            }, 10000);
+
+            return false;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

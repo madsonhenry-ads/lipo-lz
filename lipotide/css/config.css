@@ -1,0 +1,87 @@
+* {
+    font-style: normal;
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+}
+
+:root {
+    color-scheme: light only;
+    --force-light-mode: true;
+    
+    font-size: 16px;
+    --branco: #fff;
+    --bg-100: hsl(0, 0%, 100%);
+    --bg-95: #f9fafc;
+    --bg-90: #f3f4f6;
+
+    --bg-0: hsl(205, 15%, 100%);
+    --bg-5: hsl(205, 15%, 95%);
+    --bg-10: hsl(205, 15%, 90%);
+
+    --borda: hsl(0, 0%, 60%);
+    --texto-95: hsl(0, 0%, 5%);
+    --texto-70: hsl(0, 0%, 30%);
+    --texto-50: hsl(0, 0%, 50%);
+    --cor1: #257224;
+    --cor2: #04b941;
+    --cor3: #F0F7F4;
+    --cor4: #FFDE00;
+    --cor5: #be1212;
+    --radius: 12px;
+    --radius-50: 6px;
+} 
+
+body {
+    margin: 0px;
+}
+
+.numero {
+    font-family: "DM Mono", monospace;
+    font-style: normal;
+}
+
+button, a, input, textarea, select {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+
+.branco {
+    color: #fff;
+}
+
+.preto {
+    color: #000;
+}
+
+.cor1 {
+    color: var(--cor1);
+}
+
+.cor2 {
+    color: var(--cor2);
+}
+
+.cor3 {
+    color: var(--cor3);
+}
+
+.cor4 {
+    color: var(--cor4);
+}
+
+.cor5 {
+    color: var(--cor5);
+}
+
+.texto-95 {
+    color: var(--texto-95);
+}
+
+.texto-70 {
+    color: var(--texto-70);
+}
+
+.texto-50 {
+    color: var(--texto-50);
+}
