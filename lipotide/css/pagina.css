@@ -1660,7 +1660,7 @@ vturb-smartplayer {
 }
 
 #fb-comments .comment .likes::before {
-	content: url('../img/fb/likes.webp');
+	content: url('../images/like.webp');
 	cursor: pointer;
 }
 
